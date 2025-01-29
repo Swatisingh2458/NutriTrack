@@ -1,0 +1,40 @@
+/* Toolbar styling */
+mat-toolbar {
+  background: linear-gradient(
+    45deg,
+    #1141e2,
+    #00e1ff
+  ); /* Gradient background */
+  color: white;
+}
+
+/* Button styling */
+mat-button {
+  color: white;
+}
+
+mat-button[color="accent"] {
+  background-color: #ff5722; /* Accent color for buttons */
+  border-radius: 4px;
+}
+
+mat-button[color="accent"]:hover {
+  background-color: #e64a19; /* Darker shade on hover */
+}
+
+/* Spacing and layout */
+.spacer {
+  flex: 1 1 auto;
+}
+
+/* Content area styling with background image */
+body {
+  padding: 20px;
+  background: url("/NutriTrack/src/image/image.png") #f5f5f5; /* Background image with light grey fallback */
+  min-height: calc(100vh - 64px); /* Full height minus toolbar height */
+  transition: background 0.3s ease;
+}
+
+.content mat-card {
+  margin: 16px 0;
+}

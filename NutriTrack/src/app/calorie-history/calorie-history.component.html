@@ -1,0 +1,17 @@
+<mat-card class="history-card">
+  <mat-card-header>
+    <mat-card-title>Calorie History</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let entry of calorieHistory">
+        <div>
+          <span class="food-item">{{ entry.item }}</span>
+          <span class="quantity">{{ entry.quantity }}g</span> -
+          <span class="calories">{{ entry.totalCalories }} calories</span>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

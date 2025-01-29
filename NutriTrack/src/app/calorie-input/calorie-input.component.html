@@ -1,0 +1,28 @@
+<mat-card>
+  <h3>Add Calorie Entry</h3>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Food Item</mat-label>
+    <input matInput [(ngModel)]="item" placeholder="Enter food item" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Quantity (grams)</mat-label>
+    <input
+      matInput
+      type="number"
+      [(ngModel)]="quantity"
+      placeholder="Enter quantity in grams"
+    />
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="addEntry()">Add</button>
+
+  <div *ngIf="successMessage" class="success-message">
+    <p>{{ successMessage }}</p>
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+  </div>
+</mat-card>
